@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
-import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+import { default as flattenColorPalette } from "tailwindcss";
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

@@ -5,14 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/app/utils/cn";
 
-
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-0 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed top-0 inset-x-0 max-w-3xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
+        <Link href={"/"} className="text-xl text-purple-400 hover:text-white">
+          UI Dashboard
+        </Link>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Web Development</HoveredLink>
@@ -57,6 +59,12 @@ export function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
+        <Link href={"/"} className="text-purple-400 hover:text-white">
+          LogIn
+        </Link>
+        <Link href={"/"} className="text-purple-400 hover:text-white">
+          SignUp
+        </Link>
       </Menu>
     </div>
   );
@@ -128,7 +136,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full boder border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-6 "
+      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-8 px-2 py-4 "
     >
       {children}
     </nav>
@@ -156,7 +164,7 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
+        <h4 className="text-xl font-bold mb-1 text-black hover:text-purple-500 dark:text-white">
           {title}
         </h4>
         <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
@@ -171,7 +179,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black "
+      className="text-neutral-700 dark:text-neutral-200 hover:text-purple-500 "
     >
       {children}
     </Link>
