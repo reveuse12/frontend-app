@@ -12,9 +12,6 @@ export function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-0 inset-x-0 max-w-3xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <Link href={"/"} className="text-xl text-purple-400 hover:text-white">
-          UI Dashboard
-        </Link>
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Web Development</HoveredLink>
@@ -23,35 +20,35 @@ export function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/branding">Branding</HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
+        <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
-              title="Algochurn"
+              title="Admin Dashboard"
               href="https://algochurn.com"
               src="/stairs.jpg"
-              description="Prepare for tech interviews like never before."
+              description="Coming Soon..."
             />
             <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
+              title="AI-chat App"
+              href="https://ai-app-jet.vercel.app/"
               src="/stairs.jpg"
-              description="Production ready Tailwind css components for your next project"
+              description="unlocks the power of knowledge with information discovery and sharing."
             />
             <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
+              title="AD exports"
+              href="https://adexports.vercel.app/"
               src="/stairs.jpg"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              description="Discover our advanced CNC machining solutions including Multi-Tasking, 5-axis, milling, turning, CNC controls and automation."
             />
             <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
+              title="Block-staking App"
+              href="https://staking-app-pied.vercel.app/"
               src="/stairs.jpg"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              description="Our app is the only app that lets you buy crypto with a card or bank account and self-custody your assets—all in one place"
             />
           </div>
         </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
+        <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Hobby</HoveredLink>
             <HoveredLink href="/individual">Individual</HoveredLink>
@@ -59,12 +56,6 @@ export function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/enterprise">Enterprise</HoveredLink>
           </div>
         </MenuItem>
-        <Link href={"/"} className="text-purple-400 hover:text-white">
-          LogIn
-        </Link>
-        <Link href={"/"} className="text-purple-400 hover:text-white">
-          SignUp
-        </Link>
       </Menu>
     </div>
   );

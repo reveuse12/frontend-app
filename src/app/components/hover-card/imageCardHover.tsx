@@ -11,8 +11,8 @@ export function DirectionAwareHoverDemo() {
   return (
     <div className="h-[40rem] relative  flex items-center gap-6 justify-center">
       <DirectionAwareHover imageUrl={imageUrl}>
-        <h2 className="text-2xl font-bold mb-4 text-purple-300">Basic</h2>
-        <p className="text-xl mb-4">$19/month</p>
+        <h2 className="text-2xl font-bold mb-4 ">Codenvision</h2>
+        <p className="text-xl mb-4">Feb-2024 to present</p>
         <ul className="list-disc list-inside">
           <li>Real-time Data Visualization</li>
           <li>Basic Customization Options</li>
@@ -21,8 +21,8 @@ export function DirectionAwareHoverDemo() {
         </ul>
       </DirectionAwareHover>
       <DirectionAwareHover imageUrl={imageUrl}>
-        <h2 className="text-2xl font-bold mb-4">Pro</h2>
-        <p className="text-xl mb-4">$49/month</p>
+        <h2 className="text-2xl font-bold mb-4">CodeElevator(Gheeson)</h2>
+        <p className="text-xl mb-4">Feb-2023 to Jan-2024</p>
         <ul className="list-disc list-inside">
           <li>Advanced Data Visualization</li>
           <li>Full Customization</li>
@@ -31,8 +31,8 @@ export function DirectionAwareHoverDemo() {
         </ul>
       </DirectionAwareHover>
       <DirectionAwareHover imageUrl={imageUrl}>
-        <h2 className="text-2xl font-bold mb-4">Enterprise</h2>
-        <p className="text-xl mb-4">Contact Us</p>
+        <h2 className="text-2xl font-bold mb-4">Education</h2>
+        <p className="text-xl mb-4">B.E Env</p>
         <ul className="list-disc list-inside">
           <li>Custom Dashboard Solutions</li>
           <li>Premium Support</li>
