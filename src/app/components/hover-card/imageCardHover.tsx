@@ -21,7 +21,7 @@ export function DirectionAwareHoverDemo() {
         </ul>
       </DirectionAwareHover>
       <DirectionAwareHover imageUrl={imageUrl}>
-        <h2 className="text-2xl font-bold mb-4">CodeElevator(Gheeson)</h2>
+        <h2 className="text-2xl font-bold mb-4">CodeElevator (Gheeson)</h2>
         <p className="text-xl mb-4">Feb-2023 to Jan-2024</p>
         <ul className="list-disc list-inside">
           <li>Advanced Data Visualization</li>
