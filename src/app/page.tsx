@@ -12,7 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <Navbar />
       <LampDemo />
-      <section className="justify-center px-72">
+      <section className="justify-center px-8 md:px-72">
         <div className=" mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl text-slate-300 mb-6">About Me</h2>
           <div className="flex flex-col sm:flex-row items-center">

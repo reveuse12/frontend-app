@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -24,7 +23,7 @@ export function Navbar({ className }: { className?: string }) {
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Admin Dashboard"
-              href="https://algochurn.com"
+              href="/dashboard"
               src="/stairs.jpg"
               description="Coming Soon..."
             />
