@@ -1,7 +1,9 @@
+"use client";
 import {
   DashboardNav,
   NavItem,
 } from "@/components/ui/dashboard-nav/dashboard-nav";
+import MobileSidebar from "@/components/ui/dashboard-nav/mobile-nav";
 import { cn } from "@/lib/utils";
 export const navItems: NavItem[] = [
   {
@@ -45,6 +47,7 @@ export const navItems: NavItem[] = [
 function LayoutDashboard({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <MobileSidebar />
       <div className="flex h-screen overflow-hidden">
         <nav
           className={cn(
