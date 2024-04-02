@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -9,8 +10,11 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
+import { Overview, Overview2 } from "@/components/ui/Overview";
 
-const page = () => {
+const Page = () => {
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
+
   return (
     <ScrollArea className="h-screen">
       <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
@@ -32,7 +36,7 @@ const page = () => {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Total Revenue
+                    Total Employee
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +61,7 @@ const page = () => {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Subscriptions
+                    Current projects
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +87,9 @@ const page = () => {
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                  <CardTitle className="text-sm font-medium">
+                    Overtime
+                  </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -108,7 +114,7 @@ const page = () => {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Active Now
+                    Active Employee
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +143,7 @@ const page = () => {
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
                 <CardContent className="pl-2">
-                  {/* <Overview /> */}Overview
+                  <Overview />
                 </CardContent>
               </Card>
               <Card className="col-span-4 md:col-span-3">
@@ -147,7 +153,9 @@ const page = () => {
                     You made 265 sales this month.
                   </CardDescription>
                 </CardHeader>
-                <CardContent>{/* <RecentSales /> */} recent sales</CardContent>
+                <CardContent>
+                  <Overview2 />
+                </CardContent>
               </Card>
             </div>
           </TabsContent>
@@ -281,4 +289,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
