@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import {
   AlertTriangle,
   ArrowRight,
@@ -61,7 +60,7 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
-  gitHub: ({ }: LucideProps) => (
+  gitHub: ({}: LucideProps) => (
     <svg
       aria-hidden="true"
       focusable="false"
@@ -81,18 +80,3 @@ export const Icons = {
   twitter: Twitter,
   check: Check,
 };
-
-export interface NavItem {
-  title: string;
-  href?: string;
-  disabled?: boolean;
-  external?: boolean;
-  icon?: keyof typeof Icons;
-  label?: string;
-  description?: string;
-}
-
-export interface DashboardNavProps {
-  items: NavItem[];
-  setOpen?: Dispatch<SetStateAction<boolean>>;
-}
