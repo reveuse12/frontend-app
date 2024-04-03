@@ -1,10 +1,8 @@
 "use client";
-import {
-  DashboardNav,
-  NavItem,
-} from "@/components/ui/dashboard-nav/dashboard-nav";
+import { DashboardNav } from "@/components/ui/dashboard-nav/dashboard-nav";
 import MobileSidebar from "@/components/ui/dashboard-nav/mobile-nav";
 import { cn } from "@/lib/utils";
+import { NavItem } from "@/types";
 export const navItems: NavItem[] = [
   {
     title: "Dashboard",
