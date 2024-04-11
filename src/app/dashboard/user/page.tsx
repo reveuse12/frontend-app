@@ -21,6 +21,16 @@ const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
+  password: z.string().min(8, {
+    message: "Password must be at least 8 characters.",
+  }),
+  confirmPassword: z.string().min(8, {
+    message: "Confirm password must be at least 8 characters.",
+  }),
+  email: z.string().email(),
+  phone: z.string().min(10, {
+    message: "Phone number must be at least 10 characters.",
+  }),
 });
 const breadcrumbItems = [{ title: "User", link: "/dashboard/user" }];
 
@@ -29,6 +39,10 @@ const Page = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
+      email: "",
+      phone: "",
+      password: "",
+      confirmPassword: "",
     },
   });
 
@@ -50,11 +64,50 @@ const Page = () => {
                 <FormItem>
                   <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+                    <Input placeholder="username" {...field} />
                   </FormControl>
                   <FormDescription>
                     This is your public display name.
                   </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone</FormLabel>
+                  <FormControl>
+                    <Input placeholder="phone" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Password</FormLabel>
+                  <FormControl>
+                    <Input placeholder="password" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
