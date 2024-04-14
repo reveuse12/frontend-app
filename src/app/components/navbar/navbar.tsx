@@ -25,7 +25,7 @@ export function Navbar({ className }: { className?: string }) {
               title="Admin Dashboard"
               href="/dashboard"
               src="/stairs.jpg"
-              description="Coming Soon..."
+              description="Admin dashboard that focuses on employee management in company"
             />
             <ProductItem
               title="AI-chat App"
@@ -84,7 +84,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative ">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-neutral-200 hover:opacity-[0.9] dark:text-neutral-700"
       >
         {item}
       </motion.p>
@@ -99,7 +99,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-black dark:bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div
                   layout // layout ensures smooth animation
@@ -126,7 +126,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="relative rounded-full border border-transparent dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-8 px-2 py-4 "
+      className="relative rounded-full border border-transparent dark:bg-white dark:border-white/[0.2] bg-black shadow-input flex justify-center space-x-8 px-2 py-4 "
     >
       {children}
     </nav>
@@ -154,10 +154,10 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black hover:text-purple-500 dark:text-white">
+        <h4 className="text-xl font-bold mb-1 text-white hover:text-purple-500 dark:text-black">
           {title}
         </h4>
-        <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
+        <p className="text-neutral-200 text-sm max-w-[10rem] dark:text-neutral-700">
           {description}
         </p>
       </div>
@@ -169,7 +169,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-purple-500 "
+      className="text-neutral-200 dark:text-neutral-700 hover:text-purple-500"
     >
       {children}
     </Link>
