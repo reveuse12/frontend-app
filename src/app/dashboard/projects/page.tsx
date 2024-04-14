@@ -2,7 +2,9 @@
 import React from "react";
 import BreadCrumb from "@/components/ui/breadcrumb";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
 const breadcrumbItems = [{ title: "Project", link: "/dashboard/project" }];
+
 const page = () => {
   return (
     <ScrollArea className="h-full">
