@@ -1,5 +1,14 @@
 import { Icons } from "@/constants/contants";
 
+export interface AuthStoreInterface {
+  isAuthenticated: boolean;
+  token: string;
+  user: any;
+  loading: boolean;
+  error: string;
+  setUser: (user: any) => void;
+}
+
 export interface NavItem {
   title: string;
   href?: string;
