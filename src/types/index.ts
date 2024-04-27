@@ -2,10 +2,10 @@ import { Icons } from "@/constants/contants";
 
 export interface AuthStoreInterface {
   isAuthenticated: boolean;
-  token: string;
+  setToken: string;
   user: any;
   loading: boolean;
-  error: string;
+  setError: string;
   setUser: (user: any) => void;
 }
 
